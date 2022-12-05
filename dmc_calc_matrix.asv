@@ -50,9 +50,9 @@ end
 % 150,20,10,3        e=9.57(final)
 
 D=40; %horyzont dynamiki
-N=40; %horyzont predykcji
-Nu=40; %horyzont sterowania
-lambda=1; %lambda
+N=20; %horyzont predykcji
+Nu=10; %horyzont sterowania
+lambda=3; %lambda
 
 DUP = zeros(D-1, 1);
 
@@ -92,9 +92,6 @@ K=( (M'*M+LAMBDA)^-1 )*M';
 Ke = sum(K(1,:));
 Ku = K(1,:)*Mp;
 
-fprintf('%f, ',Ku);
-fprintf('\n');
-fprintf('%f, ',zeros(1,D-1));
-fprintf('\n');
+fprintf('%f',Ku);
 
 
